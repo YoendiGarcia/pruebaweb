@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+}
+
+header{
+    background-color: #03f;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.title{
+    text-align: center;
+    color: white;
+}
+
+main{
+    position: relative;
+    top: 120px;
+}
+
+.create-task{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-create{
+    height: 30px;
+    width: 50%;
+    border-radius: 20px;
+    border: 1px solid #005;
+    margin-right: 20px;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+
+.btn-create{
+    background-color: #0c0;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 1rem;
+    font-size: 1rem;
+    transition: .2s ease-in-out;
+    height: 42px;
+}
+
+.btn-create:hover{
+    background-color: #0a0;
+    cursor: pointer;
+}
+
+.tasks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+.target{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 50%;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 5px 2px gray;
+    padding: 10px;
+}
+
+.target p{
+    font-size: 1.2rem;
+    align-self: center;
+}
+
+.delete{
+    color: white;
+    background-color: #900;
+    font-size: 1rem;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.delete:hover{
+    background-color: #d00;
+    cursor: pointer;
+}

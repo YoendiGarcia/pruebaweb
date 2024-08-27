@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static',path='style.css')}}" />
+    <title>Task app CRUD</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Task app CRUD</h1>
+    </header>
+    <main>
+      <form action="/create" method="post">
+        <div class="create-task">
+          <input
+            class="input-create"
+            name="title"
+            type="text"
+            placeholder="Type the Task"
+          />
+          <button class="btn-create">Create</button>
+        </div>
+      </form>
+      <div class="tasks">
+        {% for task in tasks %}
+        <div class="target">
+          <p>{{task.title}}</p>
+          <form action="/delete" method="post">
+            <input type="text" value="{{task.id}}" hidden name="id" >
+            <button class="delete">Delete</button>
+          </form>
+        </div>
+        {% endfor %}
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
