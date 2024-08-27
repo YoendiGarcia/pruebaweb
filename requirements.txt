@@ -2,3 +2,4 @@ fastapi
 SQLAlchemy
 Jinja2
 python-multipart
+uvicorn
