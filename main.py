@@ -5,6 +5,7 @@ from database import engine, get_db
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
+import uvicorn
 
 
 models.Base.metadata.create_all(bind=engine)
@@ -41,5 +42,9 @@ async def delete(request: Request, db: Session = Depends(get_db)):
     delete_task.delete(synchronize_session=False)
     db.commit()
     return RedirectResponse('/',status_code=status.HTTP_303_SEE_OTHER)
+
+if __name__ == "main":
+    port = 8000
+    uvicorn.run(app,host="0.0.0.0",port=port)
 
     
