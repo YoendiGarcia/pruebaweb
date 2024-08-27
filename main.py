@@ -43,7 +43,7 @@ async def delete(request: Request, db: Session = Depends(get_db)):
     db.commit()
     return RedirectResponse('/',status_code=status.HTTP_303_SEE_OTHER)
 
-if __name__ == "main":
+if __name__ == "__main__":
     port = 8000
     uvicorn.run(app,host="0.0.0.0",port=port)
 
